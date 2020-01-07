@@ -48,4 +48,3 @@ public class Operation
 		collectData("1 : Sunday time : 07/01/2020: kill :Foulen Ben Foulen : eaeaeaeaeaeaeaeaeaeaeaeaeaeaeeaeaee");
 	}
 }
-
