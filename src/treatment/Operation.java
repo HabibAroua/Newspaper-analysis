@@ -30,7 +30,7 @@ public class Operation
 			newspaper.setAuthor(data[4]);
 			System.out.println("Content = "+data[5]);
 			newspaper.setContent(data[5]);
-			return new Newspaper();
+			return newspaper;
 		}
 		catch(ArrayIndexOutOfBoundsException ex)
 		{
@@ -48,3 +48,4 @@ public class Operation
 		collectData("1 : Sunday time : 07/01/2020: kill :Foulen Ben Foulen : eaeaeaeaeaeaeaeaeaeaeaeaeaeaeeaeaee");
 	}
 }
+
