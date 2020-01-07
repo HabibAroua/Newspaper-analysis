@@ -83,7 +83,18 @@ public class Newspaper
 	
 	public Newspaper()
 	{
-		
+		super();
 	}
+
+	@Override
+	public String toString() 
+	{
+		return "Newspaper [id=" + id + ", name=" + name + ", date=" + date + ", title=" + title + ", author=" + author
+				+ ", content=" + content + "]";
+	}
+	
+	
+	
+	
 	
 }

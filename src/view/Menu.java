@@ -1,8 +1,7 @@
 package view;
 
 import javax.swing.*;    
-import java.awt.event.*;   
- 
+import java.awt.event.*;    
 public class Menu implements ActionListener
 {    
 	JFrame f;    
@@ -41,22 +40,14 @@ public class Menu implements ActionListener
 	
 	public void actionPerformed(ActionEvent e) 
 	{
-		if(e.getSource()==cut)
-		{
-			ta.cut();
-		}			
-		if(e.getSource()==paste)
-		{			
-			ta.paste();
-		}		
-		if(e.getSource()==copy)
-		{			
-			ta.copy();
-		}			
-		if(e.getSource()==selectAll)
-		{			
-			ta.selectAll();
-		}			
+		if(e.getSource()==cut)    
+		ta.cut();    
+		if(e.getSource()==paste)    
+			ta.paste();    
+		if(e.getSource()==copy)    
+			ta.copy();    
+		if(e.getSource()==selectAll)    
+			ta.selectAll();    
 	}
 	
 	public static void main(String[] args)
