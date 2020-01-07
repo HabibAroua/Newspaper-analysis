@@ -2,6 +2,7 @@ package model;
 
 public class Newspaper 
 {
+	
 	private int id;
 	private String name;
 	private String date;
@@ -67,6 +68,22 @@ public class Newspaper
 	public void setContent(String content)
 	{
 		this.content = content;
+	}
+
+	public Newspaper(int id, String name, String date, String title, String author, String content)
+	{
+		super();
+		this.id = id;
+		this.name = name;
+		this.date = date;
+		this.title = title;
+		this.author = author;
+		this.content = content;
+	}
+	
+	public Newspaper()
+	{
+		
 	}
 	
 }
