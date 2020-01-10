@@ -74,7 +74,6 @@ public class Operation
 	public static void main(String args[])
 	{
 		Operation o=new Operation();
-		//System.out.println(getLine("1: Sunday time : 07/01/2020: kill :Foulen Ben Foulen : eaeaeaeaeaeaeaeaeaeaeaeaeaeaeeaeaee"));
 		o.collectData("C:/Users/lenovo/workspace/Newspaper-analysis/src/treatment/journal.txt");
 		for(int i=0 ; i<o.lists.size() ; i++)
 		{

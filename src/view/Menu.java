@@ -29,9 +29,9 @@ public class Menu implements ActionListener
 		edit.add(paste);
 		edit.add(selectAll);    
 		mb.add(file);mb.add(edit);mb.add(help);    
-		ta=new JTextArea();    
-		ta.setBounds(5,5,360,320);    
-		f.add(mb);f.add(ta);    
+		//ta=new JTextArea();    
+		//ta.setBounds(5,5,360,320);    
+		f.add(mb);//f.add(ta);    
 		f.setJMenuBar(mb);  
 		f.setLayout(null);    
 		f.setSize(400,400);    
@@ -41,7 +41,8 @@ public class Menu implements ActionListener
 	public void actionPerformed(ActionEvent e) 
 	{
 		if(e.getSource()==cut)    
-		ta.cut();    
+			//ta.cut();    
+			new Main();
 		if(e.getSource()==paste)    
 			ta.paste();    
 		if(e.getSource()==copy)    
