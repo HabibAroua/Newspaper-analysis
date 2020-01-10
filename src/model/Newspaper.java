@@ -5,6 +5,7 @@ public class Newspaper
 	
 	private int id;
 	private String name;
+	private String country;
 	private String date;
 	private String title;
 	private String author;
@@ -33,6 +34,16 @@ public class Newspaper
 	public String getDate() 
 	{
 		return date;
+	}
+	
+	public String getCountry()
+	{
+		return this.country;
+	}
+	
+	public void setCountry(String country)
+	{
+		this.country=country;
 	}
 	
 	public void setDate(String date)
@@ -70,11 +81,12 @@ public class Newspaper
 		this.content = content;
 	}
 
-	public Newspaper(int id, String name, String date, String title, String author, String content)
+	public Newspaper(int id, String name, String country , String date, String title, String author, String content)
 	{
 		super();
 		this.id = id;
 		this.name = name;
+		this.country=country;
 		this.date = date;
 		this.title = title;
 		this.author = author;
@@ -89,8 +101,8 @@ public class Newspaper
 	@Override
 	public String toString() 
 	{
-		return "Newspaper [id=" + id + ", name=" + name + ", date=" + date + ", title=" + title + ", author=" + author
-				+ ", content=" + content + "]";
+		return "Newspaper [id=" + id + ", name=" + name + ", country=" + country + ", date=" + date + ", title=" + title
+				+ ", author=" + author + ", content=" + content + "]";
 	}
-	
+
 }

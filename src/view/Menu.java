@@ -12,7 +12,7 @@ public class Menu implements ActionListener
 	Menu()
 	{
 		f=new JFrame();    
-		cut=new JMenuItem("cut");    
+		cut=new JMenuItem("Static");    
 		copy=new JMenuItem("copy");    
 		paste=new JMenuItem("paste");    
 		selectAll=new JMenuItem("selectAll");    
