@@ -13,20 +13,23 @@ public class Main
 {
 	Main()
 	{
-		SwingUtilities.invokeLater(new Runnable() 
-        {
-            public void run() 
-            {
-                JFrame frame = new JFrame("Charts");
-                frame.setSize(600, 400);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.setVisible(true);
-                XYDataset ds = createDataset();
-                JFreeChart chart = ChartFactory.createXYLineChart("Test Chart","x", "y", ds, PlotOrientation.VERTICAL, true, true,false);
-                ChartPanel cp = new ChartPanel(chart);
-                frame.getContentPane().add(cp);
-            }
-        });
+		SwingUtilities.invokeLater
+		(
+				new Runnable() 
+				{
+					public void run() 
+					{
+						JFrame frame = new JFrame("Charts");
+						frame.setSize(600, 400);
+						frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+						frame.setVisible(true);
+						XYDataset ds = createDataset();
+						JFreeChart chart = ChartFactory.createXYLineChart("Test Chart","x", "y", ds, PlotOrientation.VERTICAL, true, true,false);
+						ChartPanel cp = new ChartPanel(chart);
+						frame.getContentPane().add(cp);
+					}
+				}
+		);
 	}
 	
 	private static XYDataset createDataset() 
@@ -41,5 +44,5 @@ public class Main
     {
     	new Main();
     }
-
+    
 }
