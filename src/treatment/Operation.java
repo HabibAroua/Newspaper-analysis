@@ -139,10 +139,10 @@ public class Operation
 	{
 		for(int i=0 ; i<l.size() ; i++)
 		{
-			System.out.println("country : "+l.get(i)+" number : "+countNumberNewSpaperByCountry(l.get(i)));
+			System.out.println("country : "+l.get(i)+" number : "+countNumberNewSpaperByCountry(l.get(i))); //if result -1 that means that there are error or exception in your data
 		}
 	}
-	
+	/*
 	public static void main(String args[])
 	{
 		Operation o=new Operation("C:/Users/lenovo/workspace/Newspaper-analysis/src/treatment/journal.txt");
@@ -151,4 +151,5 @@ public class Operation
 		//o.showAllcountry();
 		o.numberNewSpapersByCountry(o.getAllcountry());
 	}
+	*/
 }
