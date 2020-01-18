@@ -10,10 +10,17 @@ import model.Newspaper;
 public class Operation 
 {
 	public ArrayList<Newspaper> lists;
+	public String url;
 	
 	public Operation()
 	{
 		lists=new ArrayList<Newspaper>();
+	}
+	
+	public Operation(String url)
+	{
+		lists=new ArrayList<Newspaper>();
+		this.url=url;
 	}
 	
 	public  Newspaper getLine(String s)
@@ -50,11 +57,11 @@ public class Operation
 		}
 	}
 	
-	public  void collectData(String url)
+	public  void collectData()
 	{
 		try
 		{
-			File file = new File(url);   
+			File file = new File(this.url);   
 			BufferedReader br = new BufferedReader(new FileReader(file));   
 			String st; 
 			while ((st = br.readLine()) != null)
@@ -73,13 +80,75 @@ public class Operation
 		}
 	}
 	
+	public void showAllNewSpapers()
+	{
+		for(int i=0; i<this.lists.size(); i++)
+		{
+			System.out.println(lists.get(i).toString());
+		}
+	}
+	
+	public ArrayList<String> getAllcountry()
+	{
+		try
+		{
+			ArrayList<String> countries=new ArrayList<String>();
+			countries.add(this.lists.get(0).getCountry());
+			for(int i=1; i<this.lists.size(); i++)
+			{
+				if(countries.contains(this.lists.get(i).getCountry()))
+				{
+					continue;
+				}
+				else
+				{
+					countries.add(this.lists.get(i).getCountry());
+				}
+			}
+			System.out.println("All Countries");
+			return countries;
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error : "+e.getMessage());
+			return null;
+		}
+	}
+	
+	public int countNumberNewSpaperByCountry(String country)
+	{
+		try
+		{
+			int nb=0;
+			for(int i=0 ; i<this.lists.size() ; i++)
+			{
+				if(this.lists.get(i).getCountry().equals(country))
+				{
+					nb++;
+				}
+			}
+			return nb;
+		}
+		catch(Exception e)
+		{
+			return -1;
+		}
+	}
+	
+	public void numberNewSpapersByCountry(ArrayList<String>l)
+	{
+		for(int i=0 ; i<l.size() ; i++)
+		{
+			System.out.println("country : "+l.get(i)+" number : "+countNumberNewSpaperByCountry(l.get(i)));
+		}
+	}
+	
 	public static void main(String args[])
 	{
-		Operation o=new Operation();
-		o.collectData("C:/Users/lenovo/workspace/Newspaper-analysis/src/treatment/journal.txt");
-		for(int i=0 ; i<o.lists.size() ; i++)
-		{
-			System.out.println(o.lists.get(i).toString());
-		}
+		Operation o=new Operation("C:/Users/lenovo/workspace/Newspaper-analysis/src/treatment/journal.txt");
+		o.collectData();
+		//o.showAllNewSpapers();
+		//o.showAllcountry();
+		o.numberNewSpapersByCountry(o.getAllcountry());
 	}
 }
