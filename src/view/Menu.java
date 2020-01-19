@@ -1,7 +1,9 @@
 package view;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;    
-import java.awt.event.*;    
+import java.awt.event.*;
+import java.io.File;    
 public class Menu implements ActionListener
 {    
 	JFrame f;    
@@ -9,33 +11,39 @@ public class Menu implements ActionListener
 	JMenu file,edit,help;    
 	JMenuItem cut,copy,paste,selectAll;    
 	JTextArea ta;    
-	Menu()
+	Menu() 
 	{
-		f=new JFrame();    
-		cut=new JMenuItem("Static");    
-		copy=new JMenuItem("copy");    
-		paste=new JMenuItem("paste");    
-		selectAll=new JMenuItem("selectAll");    
-		cut.addActionListener(this);    
-		copy.addActionListener(this);    
-		paste.addActionListener(this);    
-		selectAll.addActionListener(this);    
-		mb=new JMenuBar();    
-		file=new JMenu("File");    
-		edit=new JMenu("Edit");    
-		help=new JMenu("Help");     
-		edit.add(cut);
-		edit.add(copy);
-		edit.add(paste);
-		edit.add(selectAll);    
-		mb.add(file);mb.add(edit);mb.add(help);    
-		//ta=new JTextArea();    
-		//ta.setBounds(5,5,360,320);    
-		f.add(mb);//f.add(ta);    
-		f.setJMenuBar(mb);  
-		f.setLayout(null);    
-		f.setSize(400,400);    
-		f.setVisible(true);    
+		try
+		{
+			f=new JFrame();    
+			f.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("image/large.png")))));
+			cut=new JMenuItem("Static");    
+			copy=new JMenuItem("copy");
+			paste=new JMenuItem("paste");    
+			selectAll=new JMenuItem("selectAll");    
+			cut.addActionListener(this);    
+			copy.addActionListener(this);    
+			paste.addActionListener(this);    
+			selectAll.addActionListener(this);    
+			mb=new JMenuBar();    
+			file=new JMenu("File");    
+			edit=new JMenu("Edit");    
+			help=new JMenu("Help");     
+			edit.add(cut);
+			edit.add(copy);
+			edit.add(paste);
+			edit.add(selectAll);    
+			mb.add(file);mb.add(edit);mb.add(help);    
+			f.add(mb);//f.add(ta);    
+			f.setJMenuBar(mb);  
+			f.setLayout(null);    
+			f.setSize(600,500);    
+			f.setVisible(true);    
+		}
+		catch(Exception e)
+		{
+			
+		}
 	}     
 	
 	public void actionPerformed(ActionEvent e) 

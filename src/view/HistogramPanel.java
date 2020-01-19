@@ -60,7 +60,6 @@ public class HistogramPanel extends JPanel
             Icon icon = new ColorIcon(bar.getColor(), barWidth, barHeight);
             label.setIcon( icon );
             barPanel.add( label );
-
             JLabel barLabel = new JLabel( bar.getLabel() );
             barLabel.setHorizontalAlignment(JLabel.CENTER);
             labelPanel.add( barLabel );
