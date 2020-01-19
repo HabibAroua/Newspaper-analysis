@@ -140,11 +140,25 @@ public class HistogramPanel extends JPanel
 		}
         panel.layoutHistogram();
         JFrame frame = new JFrame("Histogram Panel");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add( panel );
         frame.setLocationByPlatform( true );
         frame.pack();
         frame.setVisible( true );
+    }
+    
+    public static void run()
+    {
+    	EventQueue.invokeLater
+        (
+        		new Runnable()
+        		{
+        			public void run()
+        			{
+        				createAndShowGUI();
+        			}
+        		}
+        );
     }
 
     public static void main(String[] args)

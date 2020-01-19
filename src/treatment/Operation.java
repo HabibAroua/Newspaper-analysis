@@ -50,6 +50,11 @@ public class Operation
 			System.out.println("Error : "+ex.getMessage());
 			return null;
 		}
+		catch(NullPointerException  ex)
+		{
+			System.out.println("Error : "+ex.getMessage());
+			return null;
+		}
 		catch(Exception ex)
 		{
 			System.out.println("Error : "+ex.getMessage());
@@ -82,9 +87,20 @@ public class Operation
 	
 	public void showAllNewSpapers()
 	{
-		for(int i=0; i<this.lists.size(); i++)
+		try
 		{
-			System.out.println(lists.get(i).toString());
+			for(int i=0; i<this.lists.size(); i++)
+			{
+				System.out.println(lists.get(i).toString());
+			}
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println("Error : "+e.getMessage());
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error : "+e.getMessage());
 		}
 	}
 	
@@ -105,13 +121,74 @@ public class Operation
 					countries.add(this.lists.get(i).getCountry());
 				}
 			}
-			System.out.println("All Countries");
 			return countries;
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println("Error : "+e.getMessage());
+			return null;
 		}
 		catch(Exception e)
 		{
 			System.out.println("Error : "+e.getMessage());
 			return null;
+		}
+	}
+	
+	public ArrayList<String> getAllAuthors()
+	{
+		try
+		{
+			ArrayList<String> authors=new ArrayList<String>();
+			authors.add(this.lists.get(0).getCountry());
+			for(int i=1; i<this.lists.size(); i++)
+			{
+				if(authors.contains(this.lists.get(i).getAuthor()))
+				{
+					continue;
+				}
+				else
+				{
+					authors.add(this.lists.get(i).getAuthor());
+				}
+			}
+			return authors;
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println("Error : "+e.getMessage());
+			return null;
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error : "+e.getMessage());
+			return null;
+		}
+	}
+	
+	public int countNewSpaperByAuthor(String author)
+	{
+		try
+		{
+			int nb=0;
+			for(int i=0 ; i<this.lists.size() ; i++)
+			{
+				if(this.lists.get(i).getAuthor().equals(author))
+				{
+					nb++;
+				}
+			}
+			return nb;
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println("Error : "+e.getMessage());
+			return -1;
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error : "+e.getMessage());
+			return -1;
 		}
 	}
 	
@@ -129,27 +206,65 @@ public class Operation
 			}
 			return nb;
 		}
+		catch(NullPointerException e)
+		{
+			System.out.println("Error : "+e.getMessage());
+			return -1;
+		}
 		catch(Exception e)
 		{
+			System.out.println("Error : "+e.getMessage());
 			return -1;
 		}
 	}
 	
 	public void numberNewSpapersByCountry(ArrayList<String>l)
 	{
-		for(int i=0 ; i<l.size() ; i++)
+		try
 		{
-			System.out.println("country : "+l.get(i)+" number : "+countNumberNewSpaperByCountry(l.get(i))); //if result -1 that means that there are error or exception in your data
+			for(int i=0 ; i<l.size() ; i++)
+			{
+				System.out.println("country : "+l.get(i)+" number : "+countNumberNewSpaperByCountry(l.get(i))); //if result -1 that means that there are error or exception in your data
+			}
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println("Error : "+e.getMessage());
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error : "+e.getMessage());
 		}
 	}
-	/*
+	
+	public void countNewSpaperByAuthors(ArrayList<String>l)
+	{
+		try
+		{
+			for(int i=0 ; i<l.size() ; i++)
+			{
+				System.out.println("country : "+l.get(i)+" number : "+countNewSpaperByAuthor(l.get(i))); //if result -1 that means that there are error or exception in your data
+			}
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println("Error : "+e.getMessage());
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error : "+e.getMessage());
+		}
+	}
+	
+	//To test Operation class
 	public static void main(String args[])
 	{
 		Operation o=new Operation("C:/Users/lenovo/workspace/Newspaper-analysis/src/treatment/journal.txt");
 		o.collectData();
 		//o.showAllNewSpapers();
 		//o.showAllcountry();
-		o.numberNewSpapersByCountry(o.getAllcountry());
+		//o.numberNewSpapersByCountry(o.getAllcountry());
+		o.countNewSpaperByAuthors(o.getAllAuthors());
 	}
-	*/
+
 }

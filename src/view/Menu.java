@@ -17,8 +17,8 @@ public class Menu implements ActionListener
 		{
 			f=new JFrame();    
 			f.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("image/large.png")))));
-			cut=new JMenuItem("Static");    
-			copy=new JMenuItem("copy");
+			cut=new JMenuItem("First analysis");    
+			copy=new JMenuItem("Second analysis");
 			paste=new JMenuItem("paste");    
 			selectAll=new JMenuItem("selectAll");    
 			cut.addActionListener(this);    
@@ -48,15 +48,23 @@ public class Menu implements ActionListener
 	
 	public void actionPerformed(ActionEvent e) 
 	{
-		if(e.getSource()==cut)    
-			//ta.cut();    
-			new Main();
-		if(e.getSource()==paste)    
-			ta.paste();    
+		if(e.getSource()==cut)
+		{
+			new HistogramPanel().run();;
+		}
+		if(e.getSource()==paste)
+		{
+			
+		}
+			  
 		if(e.getSource()==copy)    
-			ta.copy();    
-		if(e.getSource()==selectAll)    
-			ta.selectAll();    
+			//ta.copy();
+			new HistogramPanel1().run();;
+		if(e.getSource()==selectAll) 
+		{
+			
+		}
+			//ta.selectAll();    
 	}
 	
 	public static void main(String[] args)
