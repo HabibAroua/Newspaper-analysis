@@ -1,0 +1,4 @@
+France	4
+Qatar	4
+UK	7
+USA	9
