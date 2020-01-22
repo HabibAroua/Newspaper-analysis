@@ -131,20 +131,35 @@ public class HistogramPanel extends JPanel
 
     private static void createAndShowGUI()
     {
-        HistogramPanel panel = new HistogramPanel();
-        Operation o =new Operation("C:/Users/lenovo/workspace/Newspaper-analysis/src/treatment/journal.txt");
-        o.collectData();
-        for(int i=0 ; i<o.getAllcountry().size() ; i++)
+    	try
+    	{
+	        HistogramPanel panel = new HistogramPanel();
+	        Operation o =new Operation("C:/Users/lenovo/workspace/Newspaper-analysis/src/treatment/journal.txt");
+	        o.collectData();
+	        for(int i=0 ; i<o.getAllcountry().size() ; i++)
+			{
+	        	panel.addHistogramColumn(o.getAllcountry().get(i), o.countNumberNewSpaperByCountry(o.getAllcountry().get(i)), Color.CYAN);
+			}
+	        panel.layoutHistogram();
+	        JFrame frame = new JFrame("Histogram Panel");
+	        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	        frame.add( panel );
+	        frame.setLocationByPlatform( true );
+	        frame.pack();
+	        frame.setVisible( true );
+    	}
+    	catch(ArrayIndexOutOfBoundsException ex)
 		{
-        	panel.addHistogramColumn(o.getAllcountry().get(i), o.countNumberNewSpaperByCountry(o.getAllcountry().get(i)), Color.CYAN);
+			System.out.println("Error : "+ex.getMessage());
 		}
-        panel.layoutHistogram();
-        JFrame frame = new JFrame("Histogram Panel");
-        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add( panel );
-        frame.setLocationByPlatform( true );
-        frame.pack();
-        frame.setVisible( true );
+    	catch(NullPointerException e)
+    	{
+    		System.out.println("Error : "+e.getMessage());
+    	}
+    	catch(Exception e)
+    	{
+    		System.out.println("Error : "+e.getMessage());
+    	}
     }
     
     public static void run()

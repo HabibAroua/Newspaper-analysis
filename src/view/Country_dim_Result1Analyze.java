@@ -8,7 +8,6 @@ import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.swing.Icon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -21,16 +20,16 @@ import javax.swing.border.MatteBorder;
 import treatment.OperationOfResults;
 
 
-public class Date_dim_Result1Analyze extends JPanel
+public class Country_dim_Result1Analyze extends JPanel
 {
-    private int histogramHeight = 200;
+	private int histogramHeight = 200;
     private int barWidth = 50;
     private int barGap = 10;
     private JPanel barPanel;
     private JPanel labelPanel;
     private List<Bar> bars = new ArrayList<Bar>();
     
-    public Date_dim_Result1Analyze()
+    public Country_dim_Result1Analyze()
     {
         setBorder( new EmptyBorder(10, 10, 10, 10) );
         setLayout( new BorderLayout() );
@@ -148,11 +147,11 @@ public class Date_dim_Result1Analyze extends JPanel
     	try
     	{
 	        HistogramPanel panel = new HistogramPanel();
-	        OperationOfResults o2 =new OperationOfResults(2);
-			o2.collectData();
-	        for(int i=0 ; i<o2.getList2().size() ; i++)
+	        OperationOfResults o3 =new OperationOfResults(3);
+			o3.collectData();
+	        for(int i=0 ; i<o3.getList3().size() ; i++)
 			{
-	        	panel.addHistogramColumn(o2.getList2().get(i).getVal(),o2.getList2().get(i).getNb(), Color.PINK);
+	        	panel.addHistogramColumn(o3.getList3().get(i).getVal(),o3.getList3().get(i).getNb(), Color.GREEN);
 			}
 	        panel.layoutHistogram();
 	        JFrame frame = new JFrame("Histogram Panel");
@@ -203,4 +202,5 @@ public class Date_dim_Result1Analyze extends JPanel
         		}
         );
     }
+
 }
