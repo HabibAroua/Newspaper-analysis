@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import model.Author_dim_Result1;
 import model.Date_dim_Result1;
 import model.Country_dim_Result1;
-import java.io.IOException;
 
 public class OperationOfResults 
 {
