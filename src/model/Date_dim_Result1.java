@@ -42,10 +42,5 @@ public class Date_dim_Result1
 	{
 		return "Date_dim_Result1 [val=" + val + ", nb=" + nb + "]";
 	}
-	
-	
-	
-	
-	
-	
+
 }
