@@ -14,8 +14,8 @@
 
 <img src="image/Table_NewspaperByCountry.png" />
 
-<img src="image/Histogram_NewspaperByCountry" />
+<img src="image/Histogram_NewspaperByCountry.png" />
 
-<img src="image/Table_NewspaperByDate" />
+<img src="image/Table_NewspaperByDate.png" />
 
-<img src="image/Histogram_NewspaperByDate" />
+<img src="image/Histogram_NewspaperByDate.png" />
