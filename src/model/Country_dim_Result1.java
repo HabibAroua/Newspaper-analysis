@@ -42,10 +42,5 @@ public class Country_dim_Result1
 	{
 		return "Country_dim_Result1 [val=" + val + ", nb=" + nb + "]";
 	}
-	
-	
-	
-	
-	
-	
+
 }
