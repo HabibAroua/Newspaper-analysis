@@ -43,8 +43,4 @@ public class Author_dim_Result1
 		return "Author_dim_Result1 [val=" + val + ", nb=" + nb + "]";
 	}
 	
-	
-	
-	
-	
 }
