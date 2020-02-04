@@ -1,5 +1,13 @@
 # Newspaper-analysis
 
+This is the GUI of this application 
+<ul>
+  <li>Hadoop</li>
+  <li>Java Swing</li>
+  <li>HDFS</li>
+  <li>BI</li>
+ </ul>
+
 <img src="image/large.png" />
 
 <img src="image/main.png" />
