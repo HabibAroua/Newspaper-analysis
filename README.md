@@ -7,10 +7,11 @@ This is the GUI of this application
   <li>HDFS</li>
   <li>BI</li>
  </ul>
+<div>
+  <img src="image/large.png" />
 
-<img src="image/large.png" />
-
-<img src="image/main.png" />
+  <img src="image/main.png" />
+</div>
 
 <img src="image/menu.png" />
 
