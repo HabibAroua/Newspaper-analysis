@@ -28,3 +28,11 @@ This is the GUI of this application
 <img src="image/Table_NewspaperByDate.png" />
 
 <img src="image/Histogram_NewspaperByDate.png" />
+
+Made by <br>
+<ul>
+  <li>Habib Aroua</li>
+  <li>Anas Najjar</li>
+  <li>Imen Trabelsi</li>
+  <li>Manel Trabelsi</li>
+</ul>
