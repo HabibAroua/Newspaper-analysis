@@ -18,7 +18,6 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 import treatment.OperationOfResults;
 
-
 public class Country_dim_Result1Analyze extends JPanel
 {
     private int histogramHeight = 200;
@@ -53,7 +52,6 @@ public class Country_dim_Result1Analyze extends JPanel
     {
         barPanel.removeAll();
         labelPanel.removeAll();
-
         int maxValue = 0;
 
         for (Bar bar: bars)
