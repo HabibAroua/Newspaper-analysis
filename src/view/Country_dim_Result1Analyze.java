@@ -22,7 +22,7 @@ import treatment.OperationOfResults;
 
 public class Country_dim_Result1Analyze extends JPanel
 {
-	private int histogramHeight = 200;
+    private int histogramHeight = 200;
     private int barWidth = 50;
     private int barGap = 10;
     private JPanel barPanel;
@@ -111,7 +111,6 @@ public class Country_dim_Result1Analyze extends JPanel
     private class ColorIcon implements Icon
     {
         private int shadow = 3;
-
         private Color color;
         private int width;
         private int height;
@@ -150,21 +149,20 @@ public class Country_dim_Result1Analyze extends JPanel
 	        OperationOfResults o3 =new OperationOfResults(3);
 			o3.collectData();
 	        for(int i=0 ; i<o3.getList3().size() ; i++)
-			{
-	        	panel.addHistogramColumn(o3.getList3().get(i).getVal(),o3.getList3().get(i).getNb(), Color.GREEN);
-			}
+		{
+			panel.addHistogramColumn(o3.getList3().get(i).getVal(),o3.getList3().get(i).getNb(), Color.GREEN);
+		}
 	        panel.layoutHistogram();
 	        JFrame frame = new JFrame("Histogram Panel");
-	        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	        frame.add( panel );
 	        frame.setLocationByPlatform( true );
 	        frame.pack();
 	        frame.setVisible( true );
     	}
     	catch(ArrayIndexOutOfBoundsException ex)
-		{
-			System.out.println("Error : "+ex.getMessage());
-		}
+	{
+		System.out.println("Error : "+ex.getMessage());
+	}
     	catch(NullPointerException e)
     	{
     		System.out.println("Error : "+e.getMessage());
