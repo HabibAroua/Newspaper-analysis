@@ -9,6 +9,7 @@ Key word
   <li>HDFS</li>
   <li>BI</li>
  </ul>
+ 
  <center>
     <img src="image/large.png" />
     <img src="image/main.png" />
