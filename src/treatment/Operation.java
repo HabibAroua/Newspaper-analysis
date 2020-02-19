@@ -94,6 +94,10 @@ public class Operation
 				System.out.println(lists.get(i).toString());
 			}
 		}
+		catch(ArrayIndexOutOfBoundsException ex)
+		{
+			System.out.println("Error : "+ex.getMessage());
+		}
 		catch(NullPointerException e)
 		{
 			System.out.println("Error : "+e.getMessage());
@@ -206,6 +210,11 @@ public class Operation
 			}
 			return nb;
 		}
+		catch(ArrayIndexOutOfBoundsException ex)
+		{
+			System.out.println("Error : "+ex.getMessage());
+			return -1;
+		}
 		catch(NullPointerException e)
 		{
 			System.out.println("Error : "+e.getMessage());
@@ -227,6 +236,10 @@ public class Operation
 				System.out.println("country : "+l.get(i)+" number : "+countNumberNewSpaperByCountry(l.get(i))); //if result -1 that means that there are error or exception in your data
 			}
 		}
+		catch(ArrayIndexOutOfBoundsException ex)
+		{
+			System.out.println("Error : "+ex.getMessage());
+		}
 		catch(NullPointerException e)
 		{
 			System.out.println("Error : "+e.getMessage());
@@ -245,6 +258,10 @@ public class Operation
 			{
 				System.out.println("country : "+l.get(i)+" number : "+countNewSpaperByAuthor(l.get(i))); //if result -1 that means that there are error or exception in your data
 			}
+		}
+		catch(ArrayIndexOutOfBoundsException ex)
+		{
+			System.out.println("Error : "+ex.getMessage());
 		}
 		catch(NullPointerException e)
 		{
