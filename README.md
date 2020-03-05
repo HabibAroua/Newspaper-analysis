@@ -26,8 +26,8 @@ Key word
 </center>
 Made by <br>
 <ul>
-  <li>Habib Aroua</li>
-  <li>Anas Najjar</li>
-  <li>Imen Trabelsi</li>
-  <li>Manel Trabelsi</li>
+  <li>Habib AROUA</li>
+  <li>Anas NAJJAR</li>
+  <li>Imen TRABELSI</li>
+  <li>Manel TRABELSI</li>
 </ul>
