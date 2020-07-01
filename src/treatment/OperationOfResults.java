@@ -235,11 +235,11 @@ public class OperationOfResults
 		{
 			switch(this.val_init)
 			{
-				case 1 : collectAuthor_dim_Result1("C:/Users/lenovo/Documents/GitHub/Newspaper-analysis/src/treatment/out3.txt");
+				case 1 : collectAuthor_dim_Result1("__Path__/out3.txt");
 					break;
-				case 2 : collectDate_dim_Result1("C:/Users/lenovo/Documents/GitHub/Newspaper-analysis/src/treatment/out2.txt");
+				case 2 : collectDate_dim_Result1("__Path__/out2.txt");
 					break;
-				case 3 : collectCountry_dim_Result1("C:/Users/lenovo/Documents/GitHub/Newspaper-analysis/src/treatment/out1.txt");
+				case 3 : collectCountry_dim_Result1("__Path__/out1.txt");
 					break;
 			}
 		}
