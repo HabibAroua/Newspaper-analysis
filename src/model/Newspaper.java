@@ -100,8 +100,17 @@ public class Newspaper
 	@Override
 	public String toString() 
 	{
-		return "Newspaper [id=" + id + ", name=" + name + ", country=" + country + ", date=" + date + ", title=" + title
-				+ ", author=" + author + ", content=" + content + "]";
+		return "Newspaper 
+				[
+					id=" + id + ", 
+				 	name=" + name + ", 
+					country=" + country + ", 
+					date=" + date + ", 
+					title=" + title+ ", 
+					author=" + author + ", 
+					content=" + content + 
+				"]
+			";
 	}
 
 }
