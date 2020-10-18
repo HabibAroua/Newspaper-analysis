@@ -21,7 +21,6 @@ public class Main
 					{
 						JFrame frame = new JFrame("Charts");
 						frame.setSize(600, 400);
-						//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 						frame.setVisible(true);
 						XYDataset ds = createDataset();
 						JFreeChart chart = ChartFactory.createXYLineChart("Test Chart","x", "y", ds, PlotOrientation.VERTICAL, true, true,false);
