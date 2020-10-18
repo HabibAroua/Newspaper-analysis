@@ -33,16 +33,15 @@ public class Main
 	}
 	
 	private static XYDataset createDataset() 
-    {
-        DefaultXYDataset ds = new DefaultXYDataset();
-        double[][] data = { {0.1, 0.2, 0.5}, {1, 2, 3} };
-        ds.addSeries("series1", data);
-        return ds;
-    }
+    	{
+        	DefaultXYDataset ds = new DefaultXYDataset();
+        	double[][] data = { {0.1, 0.2, 0.5}, {1, 2, 3} };
+        	ds.addSeries("series1", data);
+        	return ds;
+    	}
 	
-    public static void main(String[] args)
-    {
-    	new Main();
-    }
-    
+	public static void main(String[] args)
+    	{
+    		new Main();
+    	}
 }
