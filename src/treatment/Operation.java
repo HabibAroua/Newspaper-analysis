@@ -71,7 +71,6 @@ public class Operation
 			String st; 
 			while ((st = br.readLine()) != null)
 			{
-			    //System.out.println(st);
 			    this.lists.add(getLine(st));
 			}
 		}
