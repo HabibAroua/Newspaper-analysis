@@ -2,7 +2,7 @@
 
 To test this project try to execute View/Menu.java :)
 
-This is the GUI of this application 
+This is the GUI of this application
 <br>
 Key words
 <ul>
