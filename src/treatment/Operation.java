@@ -78,6 +78,14 @@ public class Operation
 		{
 			System.out.println("Error : "+ex.getMessage());
 		}
+		catch(ArrayIndexOutOfBoundsException ex)
+		{
+			System.out.println("Error : "+ex.getMessage());
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println("Error : "+e.getMessage());
+		}
 		catch(Exception ex)
 		{
 			System.out.println("Error : "+ex.getMessage());
