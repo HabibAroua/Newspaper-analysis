@@ -153,7 +153,6 @@ public class Author_dim_Result1Analyze extends JPanel
 			}
 	        panel.layoutHistogram();
 	        JFrame frame = new JFrame("Histogram Panel");
-	        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	        frame.add( panel );
 	        frame.setLocationByPlatform( true );
 	        frame.pack();
