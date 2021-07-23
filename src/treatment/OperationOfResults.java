@@ -138,18 +138,6 @@ public class OperationOfResults
 		return this.list3;
 	}
 	
-	public ArrayList<Author_dim_Result1> getAllAuthor_dim_Result1()
-	{
-		try
-		{
-			return null;
-		}
-		catch(Exception ex)
-		{
-			return null;
-		}		
-	}
-	
 	public ArrayList<Country_dim_Result1> getAllCountry_dimResult1()
 	{
 		return null;
@@ -271,6 +259,5 @@ public class OperationOfResults
 		{
 			System.out.println(o3.getList3().get(i).toString());
 		}
-	}
-	
+	}	
 }
