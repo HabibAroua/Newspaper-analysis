@@ -263,7 +263,7 @@ public class Operation
 		{
 			for(int i=0 ; i<l.size() ; i++)
 			{
-				System.out.println("country : "+l.get(i)+" number : "+countNewSpaperByAuthor(l.get(i))); //if result -1 that means that there are error or exception in your data
+				System.out.println("country : "+l.get(i)+" number : "+countNewSpaperByAuthor(l.get(i))); //if result -1 that means, there is an error or exception in the data
 			}
 		}
 		catch(ArrayIndexOutOfBoundsException ex)
