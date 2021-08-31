@@ -46,7 +46,7 @@ public class Menu implements ActionListener
 			result.add(c7);
 			result.add(c8);
 			mb.add(file);mb.add(result);mb.add(help);    
-			f.add(mb);//f.add(ta);    
+			f.add(mb);
 			f.setJMenuBar(mb);  
 			f.setLayout(null);    
 			f.setSize(600,500);    
@@ -54,9 +54,9 @@ public class Menu implements ActionListener
 		}
 		catch(Exception e)
 		{
-			
+			System.out.println("Error : "+e.getMessage());
 		}
-	}     
+	} 
 	
 	public void actionPerformed(ActionEvent e) 
 	{
