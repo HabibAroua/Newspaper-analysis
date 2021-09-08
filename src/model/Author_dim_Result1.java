@@ -40,7 +40,10 @@ public class Author_dim_Result1
 	@Override
 	public String toString()
 	{
-		return "Author_dim_Result1 [val=" + val + ", nb=" + nb + "]";
+		return "Author_dim_Result1 
+			[
+				val=" + val + ", nb=" + nb + "
+			]";
 	}
 	
 }
