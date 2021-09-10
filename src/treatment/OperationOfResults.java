@@ -19,7 +19,6 @@ public class OperationOfResults
 	public OperationOfResults(int val_init)
 	{
 		super();
-		//init list
 		this.val_init=val_init;
 		switch(this.val_init)
 		{
