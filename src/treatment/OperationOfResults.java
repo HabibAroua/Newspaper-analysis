@@ -157,7 +157,6 @@ public class OperationOfResults
 			String st; 
 			while ((st = br.readLine()) != null)
 			{
-			    //System.out.println(st);
 			    this.list1.add(getAuthor_dim_Result1(st));
 			}
 		}
