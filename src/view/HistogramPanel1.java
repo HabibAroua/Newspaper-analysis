@@ -68,4 +68,5 @@ public class HistogramPanel1 extends ApplicationFrame
       //RefineryUtilities.centerFrameOnScreen( demo );    
       demo.setVisible( true ); 
    }
+   
 }
