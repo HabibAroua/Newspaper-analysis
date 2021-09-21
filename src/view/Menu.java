@@ -15,12 +15,12 @@ public class Menu implements ActionListener
 	{
 		try
 		{
-			f=new JFrame();    
+			f=new JFrame();
 			f.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("image/large.png")))));
-			c1=new JMenuItem("First analysis");    
+			c1=new JMenuItem("First analysis");
 			c2=new JMenuItem("Second analysis");
-			c3=new JMenuItem("Table Author by newspaper");    
-			c4=new JMenuItem("Table Country by newspaper"); 
+			c3=new JMenuItem("Table Author by newspaper");
+			c4=new JMenuItem("Table Country by newspaper");
 			c5=new JMenuItem("Table Date by newspaper");
 			c6=new JMenuItem("Chart of Author by newspaper");
 			c7=new JMenuItem("Chart of Country by newspaper");
@@ -99,8 +99,7 @@ public class Menu implements ActionListener
 		if(e.getSource() == c8)
 		{
 			new Country_dim_Result1Analyze().run();
-		}
-			//ta.selectAll();    
+		}    
 	}
 	
 	public static void main(String[] args)
