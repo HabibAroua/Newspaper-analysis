@@ -101,16 +101,15 @@ public class Newspaper
 	public String toString() 
 	{
 		return "Newspaper 
-				[
-					id=" + id + ", 
-				 	name=" + name + ", 
-					country=" + country + ", 
-					date=" + date + ", 
-					title=" + title+ ", 
-					author=" + author + ", 
-					content=" + content + 
-				"]
-			";
+		[
+			id=" + id + ", 
+			name=" + name + ", 
+			country=" + country + ", 
+			date=" + date + ", 
+			title=" + title+ ", 
+			author=" + author + ", 
+			content=" + content + 
+		"]";
 	}
 
 }
