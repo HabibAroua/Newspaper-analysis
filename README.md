@@ -4,7 +4,7 @@ To test this project try to execute View/Menu.java :)
 
 This is the GUI of this application
 <br>
-Key words
+Key word
 <ul>
   <li>Hadoop</li>
   <li>Java Swing</li>
