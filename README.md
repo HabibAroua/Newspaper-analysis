@@ -1,6 +1,5 @@
 # Newspaper-analysis
 
-
 To test this project try to execute View/Menu.java :)
 
 This is the GUI of this application
